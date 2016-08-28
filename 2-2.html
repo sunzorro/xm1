@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#list{
+			list-style: none;
+		}
+		#list li{
+			float: left;
+			height: 30px;
+			width: 99px;
+			line-height: 30px;
+			text-align: center;
+			border: 1px solid red;
+		}
+		.con{
+			width: 300px;
+			height: 300px;
+			border: 1px solid yellow;
+			display: none;
+		}
+		.one{
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	<ul id="list">
+		<li>运动</li>
+		<li>水果</li>
+		<li>网游</li>
+	</ul>
+	<div>
+		<div class="one con">篮球</div>
+		<div class="two con">香蕉</div>
+		<div class="three con">诛仙</div>
+	</div>
+	<script type="text/javascript" src="js/jquery1.js"></script>
+	<script type="text/javascript">
+
+		$("#list li").click(function(){
+			var index = $(this).index();
+			$(".con").eq(index).css("display","block").siblings().css("display","none")
+		})
+
+	</script>
+</body>
+</html>

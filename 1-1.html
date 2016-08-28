@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#list li{
+			float: left;
+			height: 30px;
+			width: 80px;
+			list-style: none;
+			overflow: hidden;
+			line-height: 30px;
+			text-align: center;
+		}
+		#list a,#list span{
+			display: block;
+		}
+		#list a{
+			background-color: #0f0;
+		}
+		#list span{
+			background-color: red;
+		}
+	</style>
+</head>
+<body>
+	<ul id="list">
+		<li>
+			<div><span>asdas</span><a href="">asdasd</a></div>
+		</li>
+		<li>
+			<div><span>adsad</span><a href="">sadasd</a></div>
+		</li>
+		<li>
+			<div><span>asdasd</span><a href="">sadasd</a></div>
+		</li>
+	</ul>
+	<script type="text/javascript" src="js/jquery1.js"></script>
+	<script type="text/javascript">
+
+		$("#list li").mouseenter(function(){
+			$(this).find("div").stop().animate({"margin-top":-30},500)
+		}).mouseleave(function(){
+			$(this).find("div").stop().animate({"margin-top":0},500)
+		})
+
+	</script>
+</body>
+</html>
